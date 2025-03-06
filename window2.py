@@ -292,7 +292,7 @@ class Ui_MainWindow(object):
         self.radioButton_2.setText(_translate("MainWindow", "Google Speech Recognition"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), _translate("MainWindow", "Распознаватель"))
         self.comboBox_2.setItemText(0, _translate("MainWindow", "Dark"))
-        self.comboBox_2.setItemText(1, _translate("MainWindow", "Light"))
+        #self.comboBox_2.setItemText(1, _translate("MainWindow", "Light"))
         self.title_text_7.setText(_translate("MainWindow", "       тема"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Тема"))
         self.title_text_8.setText(_translate("MainWindow", "Выберите имя для ассистента"))
