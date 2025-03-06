@@ -5,6 +5,9 @@ from synthesis import synthes
 from time import sleep
 import threading
 
+
+
+
 async def chat(promt):
     message = {'role': 'user', 'content': f'{promt}'}
     global a
@@ -14,7 +17,6 @@ async def chat(promt):
 
     async for part in await AsyncClient().chat(model='llama3', messages=[message], stream=True):
         a += part['message']['content']
-
 
     return a
 

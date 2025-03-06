@@ -6,3 +6,15 @@ beta-v-0.0.1-design
   
    Update:  
     • None
+
+startup-v-1.0.0-last
+
+   Update:  
+    • Mods System  
+    • Assistant  
+    • Neural Network file update  
+    • Speech recognition  
+    • Speech synthesis  
+    • Gui  
+    • Shell update  
+    • Design update  

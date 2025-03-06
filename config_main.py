@@ -2,6 +2,11 @@ import os
 from synthesis import synthes
 import webbrowser
 
+
+def hello():
+    synthes("Чем могу помочь?")
+    return "Чем могу помочь?"
+
 def opens():
     synthes("Открываю")
     os.system("start https:// --start-fullscreen")

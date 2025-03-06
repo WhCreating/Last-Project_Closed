@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog, QGridLayout, QWidget, QMessageBox, QMainWindow, QApplication, QDialog
-from PyQt5.QtCore import QCoreApplication, QSettings, QUrl
+from PyQt5.QtCore import QCoreApplication, QSettings, QUrl, QThread, pyqtSignal
 from info_micro import list_microphones
 from os import path
 from window1 import Ui_MainWindow
@@ -13,9 +13,13 @@ import asyncio
 import llama
 import asyncio
 from skillvaShell import *
+from multiprocessing import Process
+
+
 
 press_btn = False
-class Window(QMainWindow):
+class Window(QMainWindow, QThread):
+    update_signal = pyqtSignal(str)
     def __init__(self):
         super().__init__()
         
@@ -98,7 +102,11 @@ class Window(QMainWindow):
             press_btn = True
             confss['zapusk'] = 'True'
 
-            self.ui.label_4.setText(shell(micros=confss['micro'], mod=confss['mod_use']))
+            self.ui.label_4.setText("Выполняется. . .")
+
+            text = shell(micros=confss['micro'], mod=confss['mod_use'])
+            self.ui.label_4.setText(text)
+
 
             press_btn = False
 
@@ -111,6 +119,7 @@ class Window(QMainWindow):
             press_btn = False
             confss['zapusk'] = 'False'
             print(press_btn)
+            return 0
             
         
 

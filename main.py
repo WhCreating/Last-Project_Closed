@@ -9,3 +9,9 @@ import sys
 from win_main1 import Window
 from win_main2 import Window2
 
+if __name__ == '__main__':
+    import sys
+    app = QApplication(sys.argv)
+    window = Window()
+    window.show()
+    sys.exit(app.exec_())

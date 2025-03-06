@@ -10,7 +10,7 @@ def build_dict(*pairs):
 
 conf = build_dict(
     ((""), lambda: print("Укажите голосовую команду!")),
-    (("привет", ""), {"":lambda : synthes("Чем могу помочь?")}),
+    (("привет", ""), {"":hello()}),
     (("открой", "открывай"), {'браузер':lambda : opens(),
                 'youtube':lambda : opens_youtube(),
                 'ютуб':lambda : opens_youtube(),

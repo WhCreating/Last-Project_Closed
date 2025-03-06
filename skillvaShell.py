@@ -6,6 +6,7 @@ from config import conf
 from os import path
 import toml
 
+
 def shell(model='.\\models\\small_model_ru', micros=2, mod='kal'):
     parent_dir = path.dirname(path.abspath(__file__))
     with open(path.join(parent_dir, 'settings', 'config.ini'), 'r') as f:
@@ -30,10 +31,14 @@ def shell(model='.\\models\\small_model_ru', micros=2, mod='kal'):
         c = c.lower().split()
         c.append('')
 
-        if c[0] in conf:
-            v = conf[c[0]][c[1]]()
-            return f'Вы: {l}\n'f'Ответ: {v}'
-        else:
+        try:
+            if c[0] in conf:
+                v = conf[c[0]][c[1]]()
+                return f'Вы: {l}\n'f'Ответ: {v}'
+            else:
+                synthesis.synthes('Такой команды нет!')
+                return f'Вы: {l}\nОтвет: Такой команды нет!'
+        except:
             synthesis.synthes('Такой команды нет!')
             return f'Вы: {l}\nОтвет: Такой команды нет!'
 
