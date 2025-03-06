@@ -19,7 +19,10 @@ class Window2(QMainWindow, QDialog):
         self.ui.setupUi(self)
         global parent_dir
         parent_dir = path.dirname(path.abspath(__file__))
-        
+
+        # imports mods
+        all_imported_modules = import_all_modules()
+
         #проверки
         
         parent_dir = path.dirname(path.abspath(__file__))
@@ -59,6 +62,8 @@ class Window2(QMainWindow, QDialog):
             self.ui.radioButton.setChecked(False)
             self.ui.radioButton_2.setChecked(True)
 
+        name_mode = all_imported_modules[config["mod_use"]].name()
+        self.ui.radioButton_2.setText(name_mode)
 
         #pushButton
         
