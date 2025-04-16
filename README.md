@@ -21,5 +21,5 @@ startup-v-1.0.0-last
     • Shell update  
     • Design update  
     
-# Update
+# New LAST.ai
 Скоро будет ссылка на новый Last.ai
