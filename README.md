@@ -1,4 +1,4 @@
-# Last-Project
+# Last-Project[Closed]
 Голосовой помощник, имеет гибкую настройку, а также систему модификаций и нейросеть llama3.1
 
 Web-site: [Last.ai](http://last.ai.tilda.ws/)
