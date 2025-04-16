@@ -20,3 +20,6 @@ startup-v-1.0.0-last
     • Gui  
     • Shell update  
     • Design update  
+    
+# Update
+Скоро будет ссылка на новый Last.ai
