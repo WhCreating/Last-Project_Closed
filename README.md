@@ -22,4 +22,4 @@ startup-v-1.0.0-last
     • Design update  
     
 # New LAST.ai
-Скоро будет ссылка на новый Last.ai
+Site: [Last_MB_v](https://github.com/WhCreating/Last_MB_v)
